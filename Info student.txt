@@ -1,8 +1,4 @@
 Gogu Elena
 CR-222
 FCIM
-<<<<<<< HEAD
-blasblasbaslbdas
-=======
 20 ani
->>>>>>> origin/Lab_3
