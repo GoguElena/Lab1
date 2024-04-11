@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #edddf0;
+}
+
+h1 {
+  color: #5d1c66;
+  font-size: 50px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 25px;
+  color:#5d1c66;
+}
