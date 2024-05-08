@@ -1,0 +1,55 @@
+/* styles.css sau index.css */
+
+/* Stilizare pentru meniu */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Stilizare pentru conținut */
+.content-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Stilizare pentru ant design Layout */
+.ant-layout {
+  height: 100vh; /* Înălțimea layout-ului pe întreaga înălțime a ecranului */
+}
+
+.ant-layout-sider {
+  background-color: #001529; /* Culoare fundal pentru sider */
+  color: #fff; /* Culoare text pentru sider */
+}
+
+.ant-layout-sider-collapsed {
+  width: 80px; /* Lățimea sider-ului când este collapsed */
+}
+
+.ant-layout-sider-collapsed .ant-menu-item-icon {
+  margin-left: 8px; /* Margin pentru iconițele meniului când sider-ul este collapsed */
+}
+
+.ant-layout-header {
+  background-color: #001529; /* Culoare fundal pentru header */
+  color: #fff; /* Culoare text pentru header */
+  padding: 0 16px; /* Padding pentru header */
+}
