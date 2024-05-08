@@ -1,5 +1,5 @@
-import React from 'react';
-import { Form, Input, Button, Checkbox, message } from 'antd';
+import React, { useState } from 'react';
+import { Button, Form, Input, Checkbox, message } from 'antd';
 
 type FieldType = {
     username?: string;
@@ -8,12 +8,19 @@ type FieldType = {
 };
 
 const LoginPage: React.FC = () => {
+    const [registeredData, setRegisteredData] = useState<any>(() => {
+        const storedData = localStorage.getItem('formData');
+        return storedData ? JSON.parse(storedData) : {};
+    });
+
     const onFinish = (values: FieldType) => {
         console.log('Success:', values);
         // Add authentication logic here
         const { username, password } = values;
-        // Using formData from date.ts
-        if (username === 'admin' && password === 'admin') { // Example credentials for testing
+        const { firstName, lastName, password: signUpPassword } = registeredData;
+
+        // Check if the input username matches the registered first name and last name
+        if (username === firstName + ' ' + lastName && password === signUpPassword) {
             message.success('Login successful!');
         } else {
             message.error('Incorrect username or password.');
@@ -51,12 +58,13 @@ const LoginPage: React.FC = () => {
                         <Input.Password />
                     </Form.Item>
 
-                    <Form.Item style={{padding:'0 100px 0 0'}}name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
+                    <Form.Item style={{padding:'0 100px 0 0'}} name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
                         <Checkbox>Remember me</Checkbox>
                     </Form.Item>
 
-                    <Form.Item wrapperCol={{ offset: 8, span: 16 }} style={{padding:'0 100px 0 0'}}>
-                        <Button type="primary" htmlType="submit" style={{ backgroundColor: '#996633', borderColor: '#996633' }}>                            Submit
+                    <Form.Item wrapperCol={{ offset: 8, span: 16}} style={{padding:'0 100px 0 0'}}>
+                        <Button type="primary" htmlType="submit" style={{ backgroundColor: '#996633', borderColor: '#996633' }}>
+                            Submit
                         </Button>
                     </Form.Item>
                 </Form>
