@@ -11,4 +11,3 @@ export const loginData = {
     description: 'Aceasta este pagina de autentificare.',
 };
 
-// Alte date pentru alte rute...
