@@ -1,0 +1,91 @@
+/* App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F5D4F9;
+  color: #3B0941;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Asigură ca containerul să acopere întreaga înălțime a ecranului */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  margin-top: auto; /* Plasează conținutul în partea de jos a containerului */
+  padding: 10px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-right: 10px;
+  display: flex;
+  gap: 10px;
+  color: #3B0941;
+  background-color: #C7ABCA;
+  border: 2px solid #3B0941;
+  border-radius: 10px; /* Valoarea pentru rotunjire */
+  padding: 10px 20px; /* Ajustează padding-ul pentru a mări dimensiunile butoanelor */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #BA7FB5; /* Culori la hover */
+  border-color: #BA7FB5;
+  color: #FFFFFF;
+}
+
+.global-data-container {
+  padding: 20px;
+  border: 3px solid #3B0941; /* Adaugă o ramă */
+  border-radius: 8px; /* Rotunjirea unghiurilor */
+  background-color: #FFFFFF; /* Culoare fundal container date */
+}
+
+.site-layout-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 16px;
+}
