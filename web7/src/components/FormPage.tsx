@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, DatePicker, Form, Input, Radio, message } from 'antd';
+import { Button, DatePicker, Form, Input, message } from 'antd';
 
 type SizeType = Parameters<typeof Form>[0]['size'];
 
@@ -46,7 +46,7 @@ const FormPage: React.FC = () => {
                         <Input.Password />
                     </Form.Item>
                     <Form.Item label="Birth date" name="birthDate" rules={[{ required: true, message: 'Please select your birth date' }]}>
-                        <DatePicker showTime />
+                        <DatePicker showTime={false} />
                     </Form.Item>
                     <Form.Item wrapperCol={{ offset: 4, span: 14 }} >
                         <Button style={{backgroundColor:'#996633'}} type="primary" htmlType="submit">
