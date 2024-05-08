@@ -26,13 +26,13 @@ const ProductPage: React.FC = () => {
     ];
 
     return (
-        <div style={{ padding: '20px' }}>
-            <Row gutter={[16, 16]}>
+        <div style={{ padding: '30px' }} >
+            <Row gutter={[14, 14]}>
                 {products.map((product, index) => (
                     <Col key={index} xs={24} sm={12} md={8} lg={6}>
                         <Card
                             hoverable
-                            style={{ width: '100%' }}
+                            style={{ width: '80%' }}
                             cover={<img alt={product.title} src={product.image} />}
                         >
                             <Meta title={product.title} description={product.description} />
