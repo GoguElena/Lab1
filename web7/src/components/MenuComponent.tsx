@@ -14,7 +14,7 @@ const MenuComponent: React.FC = () => {
     return (
         <Layout className="custom-layout" >
             <Header style={{backgroundColor:'#663300'}}>
-                <div className="logo"/>
+                <div className="logo" style={{maxHeight: '90%'}}/>
                 <Menu style={{backgroundColor:'#663300', color:'white'}} mode="horizontal" defaultSelectedKeys={['1']}>
                     <Menu.Item key="1" >
                         <Link style={{color:'white'}} to="/">Home</Link>
